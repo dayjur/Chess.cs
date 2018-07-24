@@ -238,10 +238,10 @@ validateFenArgs.success   // bool true if valid fen otherwise false
 validateFenArgs.errorMessage // stirng ocntains the error message 
 validateFenArgs.validatedFen // string containg validated fen if valid fen
 ```
-# BUGS
+## BUGS
 - The en passant square and castling flags aren't adjusted when using the put/remove functions (workaround: use .LoadFen instead)
 
-# TODO
+## TODO
 - A more robust fen validation
 - Export game to PGN
 - Load game from PGN
