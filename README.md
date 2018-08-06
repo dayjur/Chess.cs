@@ -115,6 +115,9 @@ chess.InThreefoldRepetition();
 ## bool InsufficientMaterial()
 Returns true if the game is drawn due to insufficient material (K vs. K, K vs. KB, or K vs. KN) etc... ; otherwise false.
 
+## bool FifityMoveRule()
+Returns true on fifty move rule, i.e. no captures or pawn moves in 50 moves, a move constituting both white and black moves
+
 ## bool LoadFen(string fen)
 The board is cleared, and the FEN string is loaded. Returns true if the position was successfully loaded, otherwise false.
 ```C#
