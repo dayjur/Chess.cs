@@ -1495,13 +1495,18 @@ namespace ChessValidator
             return in_threefold_repetition();
         }
 
+        public bool FiftyMoveRule()
+        {
+            return half_moves >= 100;
+        }
+
         public bool InDraw()
         {
-            return (half_moves >= 100 || in_stalemate() || insufficient_material() || in_threefold_repetition());
+            return (FiftyMoveRule() || in_stalemate() || insufficient_material() || in_threefold_repetition());
         }
         public bool GameOver()
         {
-            return (half_moves >= 100 || in_checkmate() || in_stalemate() || insufficient_material() || in_threefold_repetition());
+            return (FiftyMoveRule() || in_checkmate() || in_stalemate() || insufficient_material() || in_threefold_repetition());
         }
 
         public bool LoadFen(string fen)
