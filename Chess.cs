@@ -1105,9 +1105,9 @@ namespace ChessValidator
             /* turn off castling if we capture a rook */
             if (castling[them] != 0)
             {
-                for (var i = 0; i < ROOKS[them].Length; i++)
+                 for (var i = 0; i < ROOKS[them].Length; i++)
                 {
-                    if (move.from == ROOKS[them][i]["square"] && ((castling[them] & ROOKS[them][i]["flag"]) != 0))
+                    if (move.to == ROOKS[them][i]["square"] && ((castling[them] & ROOKS[them][i]["flag"]) != 0))
                     {
                         castling[them] ^= ROOKS[them][i]["flag"];
                         break;
@@ -1726,3 +1726,15 @@ namespace ChessValidator
 
     }
 }
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
